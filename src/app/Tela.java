@@ -1,4 +1,4 @@
-1/*
+/*
  * A licença MIT
  *
  * Copyright 2019 Viniciusalopes Tecnologia <suporte@viniciusalopes.com.br>.
