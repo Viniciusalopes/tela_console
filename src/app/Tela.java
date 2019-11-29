@@ -95,13 +95,12 @@ public class Tela {
      * Limpa a tela no console (Linux, Windows e Mac)
      */
     public static void limpa_tela() {
-        String comando = "clear";
-
-        if (System.getProperty("os.name").contains("Windows")) {
-            comando = "cls";
-        }
         try {
-            new ProcessBuilder(comando).inheritIO().start().waitFor();
+            if (System.getProperty("os.name").toLowerCase().contains("windows")) {
+                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+            } else {
+                new ProcessBuilder("clear").inheritIO().start().waitFor();
+            }
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

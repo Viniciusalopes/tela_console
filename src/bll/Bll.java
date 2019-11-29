@@ -365,4 +365,8 @@ public class Bll {
         limpa_tela();
         desenha_mensagem("Mensagem de 1 linha, borda dupla", colunas, linhas, 'd', true);
     }
+
+    public static void watlas(String titulo, String subtitulo, String texto, int colunas, int linhas, char tipo) {
+        desenha_tela(titulo, subtitulo, texto, colunas, linhas, tipo);
+    }
 }
